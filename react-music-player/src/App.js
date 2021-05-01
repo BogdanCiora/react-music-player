@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Player from './components/Player';
 
 function App() {
-  const [songs, setSongs] = useState([
+  const [songs] = useState([
     {
       title: "Policy of truth",
       artist: "Depeche Mode",
@@ -38,11 +38,26 @@ function App() {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
+  useEffect(() => {
+    setNextSongIndex(() => {
+      // this is for when we're playing the last song
+      //this code is going to "loop" you back to the beginning of the playlist
+      if (currentSongIndex + 1 > songs.length - 1) {
+        return 0;
+      } else {
+        return currentSongIndex + 1;
+      }
+    });
+    //the line below says that if currentSongIndex changes, then call useEffect
+  }, [currentSongIndex])
+
   return (
     <div className="App">
-      <Player 
-        song={songs[currentSongIndex]}
-        nextSong={songs[nextSongIndex]}
+      <Player
+        currentSongIndex={currentSongIndex}
+        setCurrentSongIndex={setCurrentSongIndex}
+        nextSongIndex={nextSongIndex}
+        songs={songs}
       />
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react'
 function PlayerDetails(props) {
     return (
         <div className='player-details'>
-            <div>
+            <div className='details-img'>
                 <img src={props.song.img_src} alt="" />
             </div>
             <h3 className='details-title'>{props.song.title}</h3>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PlayerControls from './PlayerControls';
 import PlayerDetails from './PlayerDetails';
 
 function Player(props) {
@@ -11,11 +12,14 @@ function Player(props) {
                 song={props.song}
             />
 
-            {/* Controls */}
+            <PlayerControls  />
 
-            <strong>Next up: </strong>
+            <p>
+                <strong>Next up: </strong>
 
-            {props.nextSong.title} by {props.nextSong.artist}
+                {props.nextSong.title} by {props.nextSong.artist}
+            </p>
+        
         </div>
     )
 }

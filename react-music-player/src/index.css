@@ -6,7 +6,12 @@
 }
 
 body {
-  background-image: #DDD;
+  background-image: url("https://www.wallpapertip.com/wmimgs/79-792451_ultra-hd-gradient-background-hd.jpg");
+  background-size: 100%;
+}
+
+.body-is-playing {
+  
 }
 
 .App {
@@ -77,7 +82,7 @@ body {
   margin-bottom: 30px;
 }
 
-.player-controls .play-btn{
+.player-controls .play-btn-blue{
   display: flex;
   margin: 0 30px;
   padding: 20px;
@@ -89,6 +94,23 @@ body {
   border: none;
   outline: none;
   background-color: #3582be;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.player-controls .play-btn-red{
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), 
+  -4px -4px 10px rgba(255, 255, 255, 0.4), 
+  inset -4px -4px 10px rgba(0, 0, 0, 0.4), 
+  inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: red;
   color: #fff;
   font-size: 24px;
   cursor: pointer;

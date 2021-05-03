@@ -22,10 +22,10 @@ function App() {
       src: "./music/WhereTheEaglesLearnToFly.mp3"
     },
     {
-      title: "Money",
+      title: "Fool in the rain",
       artist: "Pink Floyd",
       img_src: "./images/PinkFloyd.jpg",
-      src: "./music/Money.mp3"
+      src: "./music/FoolInTheRain.mp3"
     },
     {
       title: "Another one bites the dust",

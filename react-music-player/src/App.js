@@ -17,7 +17,7 @@ function App() {
     },
     {
       title: "Where the eagles learn to fly",
-      artist: "Pink Cream 69",
+      artist: "Pink Cream",
       img_src: "./images/PinkCream.jpg",
       src: "./music/WhereTheEaglesLearnToFly.mp3"
     },
